@@ -1,0 +1,28 @@
+{
+	"name": "*** app name",
+	"version": "0.0.0",
+	"description": "*** app description",
+	"private": true,
+	"main": "index.html",
+	"scripts": {
+		"start": "webpack-dev-server --mode development --output-path www/ --content-base www/ --open",
+		"build": "webpack --mode development && cp dist/* www/ && rm -rf dist",
+		"build-production": "webpack --mode production && cp dist/* www/ && rm -rf dist"
+	},
+	"repository": {
+		"type": "git",
+		"url": "*** 'git+' and your repository url"
+	},
+	"author": "*** author name",
+	"license": "MIT",
+	"bugs": {
+		"url": "*** url to the issues page of your repository"
+	},
+	"homepage": "*** url to the repository url or another home page",
+	"dependencies": {},
+	"devDependencies": {
+		"webpack": "^4.2.0",
+		"webpack-cli": "^2.0.13",
+		"webpack-dev-server": "^3.1.1"
+	}
+}
