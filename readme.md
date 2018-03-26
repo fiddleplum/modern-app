@@ -31,9 +31,11 @@ This base relies on these technologies:
 
 1. Make sure you have the latest `node/npm` (brew, apt-get, etc).
 1. Populate every entry marked with `***` in your package.json file.
-1. Run `npm install`.
-1. Run `npm start`.
+1. Run `npm install` to install the node modules.
+1. Run `npm start` to start a local http server.
 1. A browser will open with the web page. The console should say "Your application has initialized."
+
+Note that when running `npm start`, any changes to your javascript files in `src/` will cause a rebuild of the `main.js` file and a reload of the webpage. You can configure this in the package.json `scripts.start` command line options.
 
 ## Builds
 
