@@ -1,6 +1,6 @@
 # Modern App
 
-In the modern environment of npm, webpack, and so many other dependencies, getting a simple web application can be a pain. This is a nice template upon which to build your application.
+In the modern JavaScript environment of npm, webpack, and so many other dependencies, creating a simple web application can be a pain. This is a nice template to start you off well.
 
 ## Depndencies
 
@@ -22,8 +22,8 @@ This base relies on these technologies:
   * `style.css` - the css style sheet for the application
   * `main.js` - the built version of your javascript files (only exists after building)
 * `license.txt` - the MIT license
-* `.gitignore` - the file that git uses to [exempt certain files](https://git-scm.com/docs/gitignore) from version control
-* `npm-shrinkwrap.json` - the file that [sets the exact versions]() of the node modules
+* `.gitignore` - the file that git uses to exempt certain files from version control
+* `npm-shrinkwrap.json` - the file that sets the exact versions of the node modules
 * `package.json` - the file that `npm` uses to download all of the dependencies and build the application
 * `readme.md` - this file
 
@@ -37,4 +37,10 @@ This base relies on these technologies:
 
 ## Builds
 
-You can run `npm run build` and `npm run build-production` to generate development and production builds of your application, respectively. The javascript file produced will be at `www/main.js`. You can get to your website by navigating in your browser to the `www/` folder. If you just see a listing, choose `index.html`.
+You can run `npm run build` and `npm run build-production` to generate development and production builds of your application, respectively. The javascript file produced will be at `www/main.js`. You can get to your website by navigating in your browser to the `www/` folder. If you just see a file listing, choose `index.html`.
+
+## Managing Your Node Modules
+
+This uses `npm shrinkwrap` so when you run `npm install` you may not have the latest versions of your dependencies, and you'll want to update them. To see which modules are out of date you can run `npm outdated`. Then for each outdated module you can run `npm update <module name>`. At the end, after you have verified everything works well, you can run `npm shrinkwrap` to shrinkwrap the updated versions.
+
+When you add new modules via `npm install <module name>`, you should run `npm shrinkwrap` again to shrinkwrap any new modules that have been downloaded.
