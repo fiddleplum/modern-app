@@ -2,7 +2,7 @@
 
 In the modern JavaScript environment of npm, webpack, and so many other dependencies, creating a simple web application can be a pain. This is a nice template to start you off well.
 
-## Depndencies
+## Dependencies
 
 This base relies on these technologies:
 
