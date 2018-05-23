@@ -20,7 +20,7 @@ This base relies on these technologies:
 * `www/` - where all of the html, css, images, and other assets go
   * `index.html` - the root of the application's html
   * `style.css` - the css style sheet for the application
-  * `main.js` - the built version of your javascript files (only exists after building)
+  * `index.js` - the built version of your javascript files (only exists after building)
 * `license.txt` - the MIT license
 * `.gitignore` - the file that git uses to exempt certain files from version control
 * `npm-shrinkwrap.json` - the file that sets the exact versions of the node modules
@@ -35,11 +35,11 @@ This base relies on these technologies:
 1. Run `npm start` to start a local http server.
 1. A browser will open with the web page. The console should say "Your application has initialized."
 
-Note that when running `npm start`, any changes to your javascript files in `src/` will cause a rebuild of the `main.js` file and a reload of the webpage. You can configure this in the package.json `scripts.start` command line options.
+Note that when running `npm start`, any changes to your javascript files in `src/` will cause a rebuild of the `index.js` file and a reload of the webpage. You can configure this in the package.json `scripts.start` command line options.
 
 ## Builds
 
-You can run `npm run build` and `npm run build-production` to generate development and production builds of your application, respectively. The javascript file produced will be at `www/main.js`. You can get to your website by navigating in your browser to the `www/` folder. If you just see a file listing, choose `index.html`.
+You can run `npm run build` and `npm run build-production` to generate development and production builds of your application, respectively. The javascript file produced will be at `www/index.js`. You can get to your website by navigating in your browser to the `www/` folder. If you just see a file listing, choose `index.html`.
 
 ## Managing Your Node Modules
 
