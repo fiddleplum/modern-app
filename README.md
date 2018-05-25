@@ -11,6 +11,7 @@ This base relies on these technologies:
 * [npm-shrinkwrap](https://docs.npmjs.com/cli/shrinkwrap)
 * [webpack](https://webpack.js.org)
 * [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
+* [eslint](https://eslint.org)
 
 ## The File Structure
 
@@ -21,11 +22,11 @@ This base relies on these technologies:
   * `index.html` - the root of the application's html
   * `style.css` - the css style sheet for the application
   * `index.js` - the built version of your javascript files (only exists after building)
-* `license.txt` - the MIT license
+* `.eslintrc` - the ES linting file to ensure that your code is formatted correctly.
 * `.gitignore` - the file that git uses to exempt certain files from version control
-* `npm-shrinkwrap.json` - the file that sets the exact versions of the node modules
+* `LICENSE.txt` - the MIT license
+* `README.md` - this file
 * `package.json` - the file that `npm` uses to download all of the dependencies and build the application
-* `readme.md` - this file
 
 ## Setup
 
@@ -43,6 +44,6 @@ You can run `npm run build` and `npm run build-production` to generate developme
 
 ## Managing Your Node Modules
 
-This uses `npm shrinkwrap` so when you run `npm install` you may not have the latest versions of your dependencies, and you'll want to update them. To see which modules are out of date you can run `npm outdated`. Then for each outdated module you can run `npm update <module name>`. At the end, after you have verified everything works well, you can run `npm shrinkwrap` to shrinkwrap the updated versions.
+You can use `npm shrinkwrap` so when you run `npm install` you may not have the latest versions of your dependencies, and you'll want to update them. To see which modules are out of date you can run `npm outdated`. Then for each outdated module you can run `npm update <module name>`. At the end, after you have verified everything works well, you can run `npm shrinkwrap` to shrinkwrap the updated versions.
 
 When you add new modules via `npm install <module name>`, you should run `npm shrinkwrap` again to shrinkwrap any new modules that have been downloaded.
