@@ -1,11 +1,12 @@
 class App {
-	static initialize() {
-		console.log('Your application has initialized.');
+	constructor() {
 	}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	App.initialize();
+	console.log('Initializing the application.');
+	window.app = new App();
+	console.log('The application has been initialized.');
 });
 
-window.App = App;
+window.app = null;
