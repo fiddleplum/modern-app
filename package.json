@@ -1,24 +1,24 @@
 {
-	"name": "*** app name",
+	"name": "{{APP NAME}}",
 	"version": "0.0.0",
-	"description": "*** app description",
+	"description": "{{APP DESCRIPTION}}",
 	"private": true,
 	"main": "index.html",
 	"scripts": {
-		"start": "webpack-dev-server --mode development --output-filename index.js --output-path www/ --content-base www/ --open",
-		"build": "webpack --mode development --output-filename index.js && cp dist/* www/ && rm -rf dist",
-		"build-production": "webpack --mode production --output-filename index.js && cp dist/* www/ && rm -rf dist"
+		"start": "webpack-dev-server --mode development --devtool source-map --output-filename index.js --content-base ../ --output-public-path /{{APP FOLDER NAME}}/www/ --open-page /{{APP FOLDER NAME}}/www",
+		"build": "webpack --mode development --devtool source-map --output-filename index.js --output-path www/",
+		"build-production": "webpack --mode production --output-filename index.js --output-path www/"
 	},
 	"repository": {
 		"type": "git",
-		"url": "*** 'git+' and your repository url"
+		"url": "{{REPO HTTPS ADDRESS}}.git"
 	},
-	"author": "*** author name",
+	"author": "{{AUTHOR}}",
 	"license": "MIT",
 	"bugs": {
-		"url": "*** url to the issues page of your repository"
+		"url": "{{REPO HTTPS ADDRESS}}/issues"
 	},
-	"homepage": "*** url to the repository url or another home page",
+	"homepage": "{{REPO HTTPS ADDRESS}}",
 	"dependencies": {},
 	"devDependencies": {
 		"eslint": "latest",
