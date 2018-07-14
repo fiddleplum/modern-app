@@ -18,11 +18,12 @@ This base relies on these technologies:
 * `node_modules/` - where all of the modules produced from `npm install` reside
 * `src/` - where all of your javascript code will go
   * `index.js` - the root of the application's javascript
+* `dist/` - where your application will go after it has been built (all www/ files are copied in here after a build)
+  * `index.js` - the built version of your javascript files (only exists after building)
 * `www/` - where all of the html, css, images, and other assets go
   * `index.html` - the root of the application's html
   * `style.css` - the css style sheet for the application
-  * `index.js` - the built version of your javascript files (only exists after building)
-* `.eslintrc` - the ES linting file to ensure that your code is formatted correctly.
+* `.eslintrc` - the ES linting file to ensure that your code is formatted correctly
 * `.gitignore` - the file that git uses to exempt certain files from version control
 * `LICENSE.txt` - the MIT license
 * `README.md` - this file
@@ -31,16 +32,16 @@ This base relies on these technologies:
 ## Setup
 
 1. Make sure you have the latest `node/npm` (brew, apt-get, etc).
-1. Populate every entry marked with `***` in your package.json file.
-1. Run `npm install` to install the node modules.
+1. Populate every entry marked with `{{...}}` in your package.json file.
+1. Run `npm install` or `npm i` to install the node modules.
 1. Run `npm start` to start a local http server.
-1. A browser will open with the web page. The console should say "Your application has initialized."
+1. A browser will open with the web page. The console should say "The application has been initialized".
 
-Note that when running `npm start`, any changes to your javascript files in `src/` will cause a rebuild of the `index.js` file and a reload of the webpage. You can configure this in the package.json `scripts.start` command line options.
+Note that when running `npm start`, any changes to your javascript files in `src/` will cause a rebuild of the `dist/index.js` file and a reload of the webpage. You can configure this in the package.json `scripts.start` command line options.
 
 ## Builds
 
-You can run `npm run build` and `npm run build-production` to generate development and production builds of your application, respectively. The javascript file produced will be at `www/index.js`. You can get to your website by navigating in your browser to the `www/` folder. If you just see a file listing, choose `index.html`.
+You can run `npm run build` and `npm run build-production` to generate development and production builds of your application, respectively. The javascript file produced will be at `dist/index.js`, and all of your files in `www/` will be copied into the `dist/` folder. You can get to your website by navigating in your browser to the `dist/` folder. If you just see a file listing, choose `index.html`. Note that using `file://` doesn't work well because AJAX requests trigger CORS errors, so you'll need an actual HTTP server.
 
 ## Managing Your Node Modules
 
