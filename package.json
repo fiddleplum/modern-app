@@ -5,9 +5,9 @@
 	"private": true,
 	"main": "index.html",
 	"scripts": {
-		"start": "webpack-dev-server --mode development --devtool source-map --output-filename index.js --content-base ../ --output-public-path /{{APP FOLDER NAME}}/www/ --open-page /{{APP FOLDER NAME}}/www",
-		"build": "webpack --mode development --devtool source-map --output-filename index.js --output-path www/",
-		"build-production": "webpack --mode production --output-filename index.js --output-path www/"
+		"start": "webpack-dev-server --mode development --devtool source-map --output-filename index.js --content-base ../ --output-public-path /{{APP FOLDER NAME}}/dist/ --open-page /{{APP FOLDER NAME}}/dist && cp -r www/* dist/",
+		"build": "webpack --mode development --devtool source-map --output-filename index.js --output-path dist/ && cp -r www/* dist/",
+		"build-production": "webpack --mode production --output-filename index.js --output-path dist/ && cp -r www/* dist/"
 	},
 	"repository": {
 		"type": "git",

@@ -1,6 +1,5 @@
-node_modules/
-www/index.js
-www/index.js.map
-www/config.js
-package-lock.json
 .DS_Store
+node_modules/
+package-lock.json
+dist/
+www/config.js
